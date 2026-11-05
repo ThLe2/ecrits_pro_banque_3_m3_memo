@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fiche mémo — Les six étapes d'un mail</title>
+<style>
+:root{--prune:#8C1E70;--prune-fonce:#5E1349;--prune-clair:#F4E6EE;--accent:#C77BAA;
+ --vert:#283C28;--gris:#3C3C3C;--gris-moyen:#8A7A85;--filet:#E8DCE5;--creme:#FAF6F8;
+ --ok:#2F7A4F;--ko:#B23B3B;--amb:#B5852A;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--creme);color:var(--gris);
+ font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.62}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px 60px}
+header.bandeau{background:var(--prune-fonce);color:#fff;padding:18px 0;border-bottom:4px solid var(--accent)}
+header.bandeau .wrap{padding-bottom:0}
+.chapitre{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#EAD3E3}
+.chapitre span{color:var(--accent);margin:0 6px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1.25;margin:8px 0 4px;color:#fff}
+.sous{color:#EAD3E3;font-size:14.5px;margin:0}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:20px;color:var(--prune-fonce);
+ margin:34px 0 0;padding-bottom:8px;border-bottom:2px solid var(--filet)}
+h2 .num{color:var(--accent);margin-right:8px}
+h3{font-size:15px;color:var(--vert);margin:20px 0 8px;letter-spacing:.02em}
+.carte{background:#fff;border:1px solid var(--filet);border-radius:10px;padding:20px 22px;margin:18px 0;
+ box-shadow:0 1px 2px rgba(94,19,73,.05)}
+.enc{background:var(--prune-clair);border-left:5px solid var(--prune);padding:14px 18px;
+ border-radius:0 8px 8px 0;margin:18px 0;font-size:15.2px}
+.enc .t{display:block;font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;
+ font-weight:800;color:var(--prune-fonce);margin-bottom:6px}
+.enc.al{background:#FBF4F4;border-left-color:var(--ko)}.enc.al .t{color:var(--ko)}
+.enc.ci{background:#FCF8F0;border-left-color:var(--amb)}.enc.ci .t{color:#8A6418}
+.situ{background:#FCF9FB;border:1px dashed var(--filet);border-radius:8px;padding:16px 18px;margin:16px 0;font-size:15.2px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.duo>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:15px 17px;font-size:14.8px}
+.duo .h{font-weight:800;color:var(--prune-fonce);margin-bottom:7px;font-size:14.5px}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.tri>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:14px 15px;font-size:14.3px}
+.quad{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.quad>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:12px 13px;font-size:13.6px}
+.quad .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13px;
+ text-transform:uppercase;letter-spacing:.04em}
+.tri .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13.5px;
+ text-transform:uppercase;letter-spacing:.05em}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.8px;background:#fff}
+th,td{border:1px solid var(--filet);padding:9px 12px;text-align:left}
+thead th{background:var(--prune-clair);color:var(--prune-fonce);font-size:13.5px}
+tbody th{font-weight:600;color:var(--gris)}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.tot td,tr.tot th{background:#FBF3F8;font-weight:800;color:var(--prune-fonce)}
+.dl{display:inline-flex;align-items:center;gap:9px;background:var(--prune);color:#fff;text-decoration:none;
+ padding:11px 20px;border-radius:8px;font-weight:700;font-size:15px;margin:20px 0 4px}
+.dl:hover{background:var(--prune-fonce)}
+ol.q{padding-left:0;list-style:none;counter-reset:q}
+ol.q>li{margin:16px 0;padding-left:38px;position:relative}
+ol.q>li::before{counter-increment:q;content:counter(q);position:absolute;left:0;top:1px;
+ width:26px;height:26px;border-radius:50%;background:var(--prune-clair);color:var(--prune-fonce);
+ font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+b,strong{color:var(--vert)}
+footer{text-align:center;font-size:12.5px;color:var(--gris-moyen);padding:26px 18px 12px;
+ border-top:1px solid var(--filet);margin-top:44px}
+@media(max-width:860px){.quad{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.duo,.tri,.quad{grid-template-columns:1fr}h1{font-size:22px}}
+@media print{body{background:#fff}.dl{display:none}header.bandeau{background:#5E1349 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+td{vertical-align:top}td:first-child{white-space:nowrap}</style></head>
+<body>
+<header class="bandeau"><div class="wrap">
+ <div class="chapitre">Écrits professionnels · banque 3/5 <span>/</span> Module 3</div><h1>Les six étapes d'un mail</h1><p class="sous">Fiche mémo — structure, formule d'appel, convivialité et politesse</p>
+</div></header>
+<div class="wrap">
+<a class="dl" href="EPB_3_M3_Fiche_memo.pdf" download>⬇ Télécharger la fiche mémo (PDF)</a>
+
+<h2><span class="num">1 ·</span>La structure fixe</h2>
+<div class="carte">
+<table><thead><tr><th>Étape</th><th>Rôle</th><th>Exemple bancaire</th></tr></thead><tbody>
+<tr><td><b>1 · Formule d'appel</b></td><td>Saluer de façon personnalisée</td><td>Bonjour Monsieur Petit, · Madame Benali,</td></tr>
+<tr><td><b>2 · Contexte</b></td><td>Rappeler ce qui a déclenché l'écrit</td><td>Vous nous avez signalé hier un prélèvement que vous contestez.</td></tr>
+<tr><td><b>3 · Informations, explications, solutions</b></td><td>Le cœur du mail : ce que le client doit savoir ou faire</td><td>Ce prélèvement a été autorisé par un mandat : vous pouvez en obtenir le remboursement…</td></tr>
+<tr><td><b>4 · Formule de convivialité</b></td><td>Garder le lien ; phrase avec un verbe</td><td>Je reste à votre écoute. · Nous vous remercions de votre confiance.</td></tr>
+<tr><td><b>5 · Formule de politesse</b></td><td>Prendre congé</td><td>Belle journée, · Bien cordialement,</td></tr>
+<tr><td><b>6 · Bloc signature</b></td><td>Identifier l'expéditeur</td><td>Prénom Nom — fonction — agence — téléphone</td></tr>
+</tbody></table>
+</div>
+
+<h2><span class="num">2 ·</span>La formule d'appel</h2>
+<div class="carte">
+<table><thead><tr><th>À privilégier</th><th>À éviter</th></tr></thead><tbody>
+<tr><td>Bonjour Madame Lefèvre, · Madame Lefèvre,</td><td>Bonjour, (seul, trop sec)</td></tr>
+<tr><td>Bonjour Monsieur et Madame Garcia,</td><td>Bonjour Mr Garcia (abréviation anglaise ; en français : M.)</td></tr>
+<tr><td>Madame, Monsieur, (destinataire inconnu)</td><td>Cher client, (impersonnel)</td></tr>
+</tbody></table>
+<div class="enc ci"><span class="t">PONCTUATION</span>La formule d'appel se termine par une virgule, et le texte reprend à la ligne avec une majuscule.</div>
+</div>
+
+<h2><span class="num">3 ·</span>Convivialité ou politesse ?</h2>
+<div class="carte">
+<div class="duo"><div><div class="h">Formule de convivialité</div>Une phrase complète, avec un verbe conjugué, terminée par un point.<br>Je reste à votre écoute. · Nous vous remercions de votre confiance. · Je vous souhaite une bonne installation dans votre nouveau logement.</div>
+<div><div class="h">Formule de politesse</div>Courte et moderne dans un mail ; sans verbe, elle se termine par une virgule.<br>Belle journée, · Bonne journée, · Bien cordialement, · Bien à vous, (client de longue date)</div></div>
+<div class="enc al"><span class="t">À ÉVITER</span>« Cordialement » seul est usé. « Salutations distinguées » est trop distant pour un mail. Les formules longues (« Je vous prie d'agréer… ») sont réservées à la lettre (écrits pro 4).</div>
+</div>
+
+<h2><span class="num">4 ·</span>À retenir</h2>
+<div class="carte"><ol class="q"><li>Appel · Contexte · Informations · Convivialité · Politesse · Signature.</li><li>Une formule d'appel personnalisée, jamais « Bonjour » seul.</li><li>Convivialité = une phrase avec un verbe ; politesse = une formule courte suivie d'une virgule.</li><li>Le bloc signature suit les usages de l'établissement.</li></ol></div>
+
+
+<footer>TMK Performances - N° Siret : 49841924100027 - Code NAF : 8559A</footer>
+</div>
+</body></html>
